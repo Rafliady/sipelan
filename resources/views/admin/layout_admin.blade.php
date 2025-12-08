@@ -18,7 +18,7 @@
     <aside class="w-64 bg-slate-900 text-slate-300 flex flex-col fixed h-full z-20 transition-all duration-300">
         <div class="p-6 border-b border-slate-800 flex items-center gap-3">
             <i class="fas fa-chart-pie text-indigo-500 text-2xl"></i>
-            <span class="font-bold text-white text-lg">E-Kinerja</span>
+            <span class="font-bold text-white text-lg">Admin|SiPeLan</span>
         </div>
         
         <nav class="flex-1 p-4 space-y-2">

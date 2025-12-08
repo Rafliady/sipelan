@@ -23,8 +23,8 @@
 
 <div class="container mx-auto px-4 py-10">
     <div class="text-center mb-10 text-white">
-        <h2 class="text-3xl md:text-4xl font-bold mb-2">Siapa yang ingin Anda nilai?</h2>
-        <p class="text-white/80 text-lg">Pilih salah satu pegawai di bawah ini.</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-2"> Silahkan Pilih Pegawai yang ingin Anda nilai?</h2>
+        <p class="text-white/80 text-lg">Silahkan Pilih salah satu pegawai di bawah ini.</p>
     </div>
 
     @if(session('success'))
