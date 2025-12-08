@@ -10,9 +10,10 @@
 
     <div class="bg-white/95 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-2xl w-full max-w-lg border border-white/50">
         <div class="text-center mb-8">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="w-20 h-20 mx-auto mb-4 drop-shadow-md">
-            <h1 class="text-3xl font-bold text-slate-800 mb-2">Selamat Datang</h1>
-            <p class="text-slate-500">Silakan isi data diri Anda untuk memulai penilaian kinerja pegawai.</p>
+            <img src="{{ asset('storage/img/LOGO IMIGRASI.jpeg') }}" class="w-20 h-20 mx-auto mb-4 drop-shadow-md">
+            <h1 class="text-3xl font-bold text-slate-800 mb-2">Selamat Datang 
+                Di SiPeLan</h1>
+            <p class="text-slate-500">Survey Penilaian Pelayanan Pegawai - Silakan isi data diri Anda Agar Dapat melakukan Survey Pelayanan pegawai imigrasi .</p>
         </div>
 
         <form action="{{ route('public.enter') }}" method="POST" class="space-y-5">
@@ -43,6 +44,6 @@
         </form>
     </div>
     
-    <p class="text-white/50 text-sm mt-8 text-center">&copy; {{ date('Y') }} Sistem Penilaian Kinerja. All Rights Reserved.</p>
+    <p class="text-white/50 text-sm mt-8 text-center">&copy; {{ date('Y') }} Survey Penilaian Pelayanan. All Rights Reserved.</p>
 </div>
 @endsection

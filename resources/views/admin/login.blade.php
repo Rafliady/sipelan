@@ -11,7 +11,7 @@
                 <div class="w-16 h-16 bg-indigo-500 rounded-xl mx-auto flex items-center justify-center mb-4 shadow-lg shadow-indigo-500/50">
                     <i class="fas fa-user-shield text-3xl text-white"></i>
                 </div>
-                <h2 class="text-2xl font-bold text-white">Admin Portal</h2>
+                <h2 class="text-2xl font-bold text-white">Admin Login</h2>
                 <p class="text-slate-400 text-sm">Masukan kredensial untuk mengakses panel.</p>
             </div>
 
