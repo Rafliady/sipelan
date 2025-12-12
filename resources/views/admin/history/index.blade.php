@@ -6,7 +6,7 @@
     <table class="w-full text-left">
         <thead class="bg-gray-50 text-gray-500 text-sm">
             <tr>
-                <th class="p-4">Tanggal</th>
+                <th class="p-4">Tanggal (WIB)</th>
                 <th class="p-4">Responden</th>
                 <th class="p-4">Pegawai Dinilai</th>
                 <th class="p-4 text-center">Skor (1-5)</th>
@@ -17,13 +17,30 @@
             @foreach($assessments as $data)
             <tr class="hover:bg-gray-50" x-data="{ editMode: false }">
                 <td class="p-4 text-gray-500 text-sm">
-                    {{ $data->created_at->format('d M Y, H:i') }}
+                    {{ $data->created_at->setTimezone('Asia/Jakarta')->format('d M Y, H:i') }} WIB
                 </td>
                 <td class="p-4">
                     <div x-show="!editMode">
                         <div class="font-bold">{{ $data->surveyor_name }}</div>
-                        <div class="text-xs text-gray-400">{{ $data->surveyor_phone }}</div>
+                        
+                        @php
+                            // Bersihkan nomor dari spasi atau strip
+                            $noHp = preg_replace('/[^0-9]/', '', $data->surveyor_phone);
+                            
+                            // Cek jika dimulai dengan angka 0, ganti dengan 62
+                            if(substr($noHp, 0, 1) == '0'){
+                                $noHp = '62'.substr($noHp, 1);
+                            }
+                        @endphp
+
+                        <div class="text-xs text-gray-400 mt-1">
+                            <a href="https://wa.me/{{ $noHp }}" target="_blank" class="flex items-center gap-1 hover:text-green-600 hover:underline transition">
+                                <i class="fab fa-whatsapp text-green-500"></i>
+                                {{ $data->surveyor_phone }}
+                            </a>
+                        </div>
                     </div>
+
                     <div x-show="editMode">
                         <form action="{{ route('admin.history.update', $data->id) }}" method="POST">
                             @csrf @method('PUT')
