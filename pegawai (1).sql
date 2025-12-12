@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Des 2025 pada 07.49
+-- Waktu pembuatan: 12 Des 2025 pada 07.54
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -36,22 +36,6 @@ CREATE TABLE `assessments` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data untuk tabel `assessments`
---
-
-INSERT INTO `assessments` (`id`, `employee_id`, `surveyor_name`, `surveyor_phone`, `rating`, `created_at`, `updated_at`) VALUES
-(1, 2, 'rafliady Izza', '08233445667', 5, '2025-12-07 21:07:35', '2025-12-07 21:07:35'),
-(2, 3, 'rafliady Izza', '08233445667', 3, '2025-12-07 21:13:38', '2025-12-07 21:13:38'),
-(3, 2, 'rafliady Izza', '08233445667', 4, '2025-12-07 21:15:07', '2025-12-07 21:15:07'),
-(4, 3, 'rafliady Izza', '08233445667', 5, '2025-12-07 21:15:15', '2025-12-07 21:15:15'),
-(5, 1, 'rafliady Izza', '08233445667', 5, '2025-12-07 21:15:21', '2025-12-07 21:15:21'),
-(6, 3, 'rafliady Izza', '08233445667', 1, '2025-12-07 21:30:26', '2025-12-07 21:30:26'),
-(7, 2, 'rafliady Izza', '08233445667', 5, '2025-12-07 21:30:31', '2025-12-07 21:30:31'),
-(8, 2, 'achmad Rifai', '08233445667', 5, '2025-12-07 21:41:05', '2025-12-07 21:41:05'),
-(9, 3, 'achmad Rifai', '08233445667', 1, '2025-12-07 21:41:38', '2025-12-07 21:41:38'),
-(10, 2, 'rafliady Izza', '08233445667', 5, '2025-12-07 23:28:03', '2025-12-07 23:28:03');
 
 -- --------------------------------------------------------
 
@@ -97,9 +81,17 @@ CREATE TABLE `employees` (
 --
 
 INSERT INTO `employees` (`id`, `name`, `position`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 'Contoh Pegawai', 'Staff', NULL, '2025-12-07 21:04:02', '2025-12-07 21:04:02'),
-(2, 'rafliady Izza', 'Seksi Kepala Tikim', 'employees/3qKmsBPwf9fcG7FF3W8f3yWnMYJMyezfq12IRhpm.jpg', '2025-12-07 21:06:37', '2025-12-07 21:06:37'),
-(3, 'achmad Rifai', 'Kepala Intelegen', 'employees/WNJPYdBIm7UdGaHjYWHWTl82xdXNeWyXGT3r2y9t.jpg', '2025-12-07 21:06:52', '2025-12-07 21:06:52');
+(5, 'Akbar Handoko, S.E.', 'Analis Keimigrasian Ahli Pertama', 'employees/bd9G8JqMM4Lw8ixrJONnf2HjCav3dljmHJmqIjJZ.png', '2025-12-11 23:24:10', '2025-12-11 23:25:03'),
+(6, 'Deska Reinaldy Akbar, S.H.', 'Analis Keimigrasian Ahli Pertama', 'employees/F9kEPGQSB2SboNblULWucta0dqn4HL361ngiaAib.png', '2025-12-11 23:24:10', '2025-12-11 23:24:10'),
+(7, 'Heri Eka Kurniawan, A.Md.', 'Pengelola Data Keimigrasian', 'employees/R2OyrdV0BufQgFAbQOlxMY0SZGYaV4ibWrrYLDDm.png', '2025-12-11 23:25:52', '2025-12-11 23:25:52'),
+(8, 'Nur Atiqotul Zulfa, S.E.', 'Analis Keimigrasian Ahli Pertama', 'employees/IWjeh5xeT0vMYM9ItjfYvxxSJND7L6WKZ6wWOh8y.png', '2025-12-11 23:26:30', '2025-12-11 23:26:30'),
+(9, 'Triono, S.H.', 'Pengelola Data Keimigrasian', 'employees/MWSIN75DCZWAqbti7bDvqk1QxHDOHCMdbfsdzBkY.png', '2025-12-11 23:26:48', '2025-12-11 23:26:48'),
+(11, 'Muhammad Ulil Albab Ahla Royyana', 'Pemeriksa Keimigrasian Pemula', 'employees/hMkNVnIjkADc8mBeP2lDqgzE6sMAxf7Des8wYMcn.png', '2025-12-11 23:27:16', '2025-12-11 23:27:16'),
+(12, 'Rahmah Arfiani', 'Pemeriksa Keimigrasian Pemula', 'employees/eFHkawNUFWmvFVDeUTvis7pp7kmyTj9rQQF6UZxh.png', '2025-12-11 23:27:38', '2025-12-11 23:27:38'),
+(13, 'Citra Adhi Pradana, S.H.', 'Pengelola Data Keimigrasian', 'employees/aVpPRp6iL1U0AfGwNJ6BCv1tfsTdWNv23IrHnRB1.png', '2025-12-11 23:28:17', '2025-12-11 23:28:17'),
+(14, 'Anang Budi Sulistyo, S.T.', 'Pengelola Sarana dan Prasarana Kantor', 'employees/thFQkW5coEqaCClPe5Jri2NFrEZDS7ZS7axUSLLK.png', '2025-12-11 23:28:44', '2025-12-11 23:28:44'),
+(15, 'Adik Pamungkas, S.H.', 'Analis Keimigrasian Ahli Pertama', NULL, '2025-12-11 23:29:03', '2025-12-11 23:29:03'),
+(16, 'Ayu Mustika Fiesabilla', 'JFU', 'employees/eEC1OHz9l3r9D6pmKlWIbx654CTA90YwtMHEceW0.png', '2025-12-11 23:29:29', '2025-12-11 23:29:29');
 
 -- --------------------------------------------------------
 
@@ -208,7 +200,9 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('zLhUWayeQWc4ZW7ztD9CQqhOXLnGBVsjMx54Tn9y', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNXlmenZPbGt0N2tJVWpJamNJRzNSQ1J6c3N5ajZ4OXRZckJrTTdMSyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7czo0OiJob21lIjt9fQ==', 1765175383);
+('A2p8sqAHSdbzClFdVo4Xgwfh4WJ7IokZFVVgTGlx', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiZ0FoR2UxOXVFTGNFN1ZsaThGcEZhVVZzV3RTWGh2NnU4bk8zeU1xMSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9sb2dpbiI7czo1OiJyb3V0ZSI7czo1OiJsb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1765521637),
+('kbSwwUS4qnZ7BbCkfY2pJF1D1AitJ81CeXqoV1TM', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiczRMTlAwVUcwMUsyRjAwa0gxUm9ZUzViVktYZ0l1c0ZWYmxPRjlOQSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7czo0OiJob21lIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1765522374),
+('U8waEblPnhtTTEynhaoR8Co9ClV8g75MYz9TNIkO', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVjNMdndzMmNWZnFsaVBJcHN4VkVKQ2hVOTR3TU4xOVJlR1F6eXF0YSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7czo0OiJob21lIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1765520474);
 
 -- --------------------------------------------------------
 
@@ -229,7 +223,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
-(1, 'bg_image', 'settings/RJtoFwNYKYfe7fZwb8zGhDyxEeoge5ngVBP519MV.jpg', '2025-12-07 21:49:16', '2025-12-07 23:26:53');
+(1, 'bg_image', 'settings/Uftolpg6T1pQaWA2anbpNYfrpHtS3xYYwSsmpgAP.png', '2025-12-07 21:49:16', '2025-12-11 23:30:06');
 
 -- --------------------------------------------------------
 
@@ -348,13 +342,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `assessments`
 --
 ALTER TABLE `assessments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
