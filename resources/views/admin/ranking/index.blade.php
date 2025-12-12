@@ -2,8 +2,8 @@
 @section('content')
 <div class="flex flex-col md:flex-row justify-between items-end mb-6 gap-4">
     <div>
-        <h2 class="text-2xl font-bold text-gray-800">Laporan & Ranking</h2>
-        <p class="text-gray-500 text-sm">Data akumulasi poin dan export laporan.</p>
+        <h2 class="text-2xl font-bold text-gray-800">Ranking & Skor Akumulasi</h2>
+        <p class="text-gray-500 text-sm">Data akumulasi poin dan ekspor laporan</p>
     </div>
     
     <div class="flex gap-2">
@@ -29,7 +29,7 @@
             <tr>
                 <th class="p-4">Rank</th>
                 <th class="p-4">Pegawai</th>
-                <th class="p-4 text-center">Jml Responden</th>
+                <th class="p-4 text-center">Jumlah Responden</th>
                 <th class="p-4 text-center">Total Poin (Akumulasi)</th>
                 <th class="p-4 text-center">Rata-Rata</th>
                 <th class="p-4 text-center">Status</th>

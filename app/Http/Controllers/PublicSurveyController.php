@@ -7,7 +7,6 @@ use App\Models\Employee;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-
 class PublicSurveyController extends Controller
 {
     // 1. Halaman Depan (Input Data Diri)
@@ -25,10 +24,19 @@ class PublicSurveyController extends Controller
         return redirect()->route('public.list');
     }
 
-    // 3. Daftar Pegawai
-    public function list() {
+    // 3. Daftar Pegawai + FITUR SEARCH
+    public function list(Request $request) {
         if (!Session::has('surveyor')) return redirect()->route('home');
-        $employees = Employee::all();
+
+        // Ambil keyword search (jika ada)
+        $search = $request->search;
+
+        // Filter berdasarkan nama atau posisi
+        $employees = Employee::when($search, function ($query) use ($search) {
+            $query->where('name', 'like', "%{$search}%")
+                  ->orWhere('position', 'like', "%{$search}%");
+        })->get();
+
         return view('public.list', compact('employees'));
     }
 
@@ -50,7 +58,7 @@ class PublicSurveyController extends Controller
             'rating' => $request->rating, // Simpan satu nilai ini
         ]);
 
-        return redirect()->route('public.list')->with('success', 'Penilaian berhasil dikirim!');
+        return redirect()->route('public.list')->with('success', 'Berhasil! Penilaian Anda sudah tersimpan. Lanjutkan memilih pegawai lainnya, atau tekan selesai jika sudah selesai melakukan penilaian');
     }
 
     // 6. Keluar / Ganti Orang

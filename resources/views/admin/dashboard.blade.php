@@ -2,7 +2,7 @@
 @section('content')
 <div class="mb-8">
     <h1 class="text-3xl font-bold text-gray-800">Dashboard Overview</h1>
-    <p class="text-gray-500">Ringkasan performa penilaian kinerja pegawai.</p>
+    <p class="text-gray-500">Ringkasan performa penilaian kinerja pegawai</p>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
@@ -21,7 +21,7 @@
             <i class="fas fa-poll"></i>
         </div>
         <div>
-            <p class="text-sm text-gray-500">Total Survey</p>
+            <p class="text-sm text-gray-500">Total Survei</p>
             <h3 class="text-2xl font-bold">{{ $totalSurvey }}</h3>
         </div>
     </div>
@@ -31,13 +31,13 @@
             <i class="fas fa-calendar-check"></i>
         </div>
         <div>
-            <p class="text-sm text-gray-500">Masuk Bulan Ini</p>
+            <p class="text-sm text-gray-500">Data Masuk Bulan Ini</p>
             <h3 class="text-2xl font-bold">{{ $surveyBulanIni }}</h3>
         </div>
     </div>
 
     <div class="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 rounded-2xl shadow-lg text-white">
-        <p class="text-xs text-indigo-200 uppercase tracking-wider mb-1">Star of the Month</p>
+        <p class="text-xs text-indigo-200 uppercase tracking-wider mb-1">Pelayanan Terbaik Bulan Ini</p>
         @if($topEmployee)
             <h3 class="text-xl font-bold truncate">{{ $topEmployee->name }}</h3>
             <div class="flex items-center gap-2 mt-2">

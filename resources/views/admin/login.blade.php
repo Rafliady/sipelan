@@ -11,8 +11,8 @@
                 <div class="w-16 h-16 bg-indigo-500 rounded-xl mx-auto flex items-center justify-center mb-4 shadow-lg shadow-indigo-500/50">
                     <i class="fas fa-user-shield text-3xl text-white"></i>
                 </div>
-                <h2 class="text-2xl font-bold text-white">Admin Login</h2>
-                <p class="text-slate-400 text-sm">Masukan kredensial untuk mengakses panel.</p>
+                <h2 class="text-2xl font-bold text-white">Login Admin</h2>
+                <p class="text-slate-400 text-sm">Masukkan data login Anda untuk masuk ke Panel</p>
             </div>
 
             @if($errors->any())
@@ -40,13 +40,13 @@
                 </div>
 
                 <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg transition shadow-lg shadow-indigo-600/30">
-                    MASUK SISTEM
+                    MASUK
                 </button>
             </form>
             
             <div class="mt-6 text-center">
                 <a href="{{ route('home') }}" class="text-slate-500 hover:text-white text-sm transition">
-                    &larr; Kembali ke Halaman Survey
+                    &larr; Kembali ke Halaman Survei
                 </a>
             </div>
         </div>

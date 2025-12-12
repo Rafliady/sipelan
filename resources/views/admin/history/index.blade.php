@@ -1,14 +1,14 @@
 @extends('admin.layout_admin')
 @section('content')
-<h2 class="text-2xl font-bold text-gray-800 mb-6">Riwayat Masuk Survey</h2>
+<h2 class="text-2xl font-bold text-gray-800 mb-6">Riwayat Masuk Data Responden</h2>
 
 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
     <table class="w-full text-left">
         <thead class="bg-gray-50 text-gray-500 text-sm">
             <tr>
                 <th class="p-4">Tanggal</th>
-                <th class="p-4">Penyurvei</th>
-                <th class="p-4">Menilai Pegawai</th>
+                <th class="p-4">Responden</th>
+                <th class="p-4">Pegawai Dinilai</th>
                 <th class="p-4 text-center">Skor (1-5)</th>
                 <th class="p-4 text-right">Aksi</th>
             </tr>
